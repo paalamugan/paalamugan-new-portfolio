@@ -94,7 +94,7 @@ svg {
 
 .spinner {
   margin: 50vh auto 0;
-  width: 70px;
+  width: 100px;
   text-align: center;
 }
 
@@ -107,6 +107,10 @@ svg {
   display: inline-block;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner > div:not(:last-child) {
+  margin-right: 0.2rem;
 }
 
 .spinner .bounce1 {
