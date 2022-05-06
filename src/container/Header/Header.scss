@@ -80,8 +80,13 @@
     p {
       width: 100%;
       text-transform: uppercase;
-      text-align: right;
+      text-align: left;
+      @media (min-width: 1200px) {
+        text-align: right;
+      }
     }
+
+
   }
 
   span {

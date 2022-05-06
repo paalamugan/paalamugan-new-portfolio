@@ -85,7 +85,7 @@
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1060px) {
     display: none;
   }
 }
@@ -172,18 +172,17 @@
       }
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1060px) {
       display: none;
     }
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1060px) {
     display: none;
   }
 }
 
 .logo-font {
-  font-family: 'Creepster', cursive;
-  // font-family: 'Diplomata SC', cursive;
+  font-family: 'Creepster', sans-serif;
   letter-spacing: 4px;
 }

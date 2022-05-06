@@ -6,6 +6,7 @@ import Work from './Work/Work';
 import Knowledge from './Knowledge/Knowledge';
 import Contact from './Contact/Contact';
 import Services from './Services/Services';
+import Footer from './Footer/Footer';
 
 export {
   About,
@@ -16,4 +17,5 @@ export {
   Knowledge,
   Contact,
   Services,
+  Footer,
 };

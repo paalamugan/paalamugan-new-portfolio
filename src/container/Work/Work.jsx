@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 // import { urlFor, client } from '../../client';
 import './Work.scss';
-import { images, programmingLanguages, workTags } from '../../constants';
+import { images, programmingLanguages, workTabs } from '../../constants';
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -100,7 +100,7 @@ const Work = () => {
       <h2 className="head-text">Checkout <span>Some of</span> my work</h2>
 
       <div className="app__work-filter">
-        {workTags.map((item, index) => (
+        {workTabs.map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -158,6 +158,7 @@ const Work = () => {
                 <div className="flex gap-2">
                   {work.tags.map((tag) => (
                     <a
+                      key={tag}
                       href={programmingLanguages[tag]?.url}
                       target="_blank"
                       rel="noopener noreferrer"

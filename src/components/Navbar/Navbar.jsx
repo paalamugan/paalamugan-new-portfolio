@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, useCycle } from 'framer-motion';
 
@@ -34,14 +34,25 @@ const Navbar = () => {
     setCurrentActiveLink(hash.slice(1));
   }, []);
 
+  const handleClickOutside = useCallback((e) => {
+    if (!e.target.closest('.app__navbar-menu')) {
+      toggleOpen();
+    }
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
       return toggleNavbarOpen(isOpen);
     }
+
     const timer = setTimeout(() => {
+      document.removeEventListener('click', handleClickOutside);
       toggleNavbarOpen(isOpen);
     }, 1000);
+
     return () => {
+      document.removeEventListener('click', handleClickOutside);
       clearTimeout(timer);
     };
   }, [isOpen]);
@@ -68,6 +79,7 @@ const Navbar = () => {
         <HiMenu className={`${!isNavbarOpen ? 'z-10' : ''}`} onClick={() => toggleOpen()} />
 
         <motion.div
+          className={`${!isNavbarOpen ? 'invisible' : ''}`}
           variants={navbarVariants}
         >
           <HiX onClick={() => toggleOpen()} />

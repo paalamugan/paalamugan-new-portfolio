@@ -1,5 +1,16 @@
 import * as icons from './icons';
 
+export const navLinks = [
+  'home',
+  'about',
+  'knowledge',
+  'services',
+  'work',
+  'skills',
+  'testimonial',
+  'contact',
+];
+
 export const socialLinks = [
   {
     name: 'Github',
@@ -39,7 +50,7 @@ export const jobPositions = [
   'Web Developer',
 ];
 
-export const workTags = ['All', 'React', 'Angular', 'Svelte', 'Nodejs'];
+export const workTabs = ['All', 'React', 'Angular', 'Svelte', 'Nodejs'];
 
 export const programmingLanguages = {
   angular: {
