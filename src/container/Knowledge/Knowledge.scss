@@ -13,7 +13,7 @@
 }
 
 .app__profile-item {
-  width: 190px;
+  width: 280px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -34,5 +34,12 @@
     img {
       height: 320px;
     }
+  }
+  @media screen and (min-width: 800px) { 
+    width: 260px;
+  }
+
+  @media screen and (min-width: 1200px) { 
+    width: 190px;
   }
 }
